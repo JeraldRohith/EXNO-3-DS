@@ -171,10 +171,13 @@ np.log(df["Highly Positive Skew"])
 ```
 # Output:
 <img width="387" height="607" alt="image" src="https://github.com/user-attachments/assets/1fae85e4-3f6b-45db-824a-40106dc826e2" />
+
+
 ```
  np.reciprocal(df["Moderate Positive Skew"])
 
 ```
+
 # Output:
 
 <img width="479" height="613" alt="image" src="https://github.com/user-attachments/assets/b9d1febd-f4d2-4a12-913d-9db21e6d707d" />
@@ -188,6 +191,7 @@ np.log(df["Highly Positive Skew"])
 
 <img width="420" height="619" alt="image" src="https://github.com/user-attachments/assets/6595f869-d9f8-4e6f-8aa1-d7c31d5ef1e5" />
 
+
 ```
  np.square(df["Highly Positive Skew"])
 
@@ -197,6 +201,7 @@ np.log(df["Highly Positive Skew"])
 
 <img width="466" height="609" alt="image" src="https://github.com/user-attachments/assets/036b77cd-beb6-4e96-85a6-8609ad8743a2" />
 
+
 ```
   df["Highly Positive Skew_boxcox"], parameters=stats.boxcox(df["Highly Positive Skew"])
   df
@@ -205,7 +210,9 @@ np.log(df["Highly Positive Skew"])
 
 # Output:
 
+
 <img width="1382" height="589" alt="image" src="https://github.com/user-attachments/assets/8aaac5e3-3662-480e-ae9b-ec14acc51a6a" />
+
 
 ```
 df.skew()
@@ -214,7 +221,9 @@ df.skew()
 
 # Output:
 
+
 <img width="450" height="340" alt="image" src="https://github.com/user-attachments/assets/48374efb-169d-4b3e-a022-1a3ac7e5fcef" />
+
 
 ```
  df["Highly Negative Skew_yeojohnson"],parameters=stats.yeojohnson(df["Highly Negative Skew"])
@@ -224,7 +233,9 @@ df.skew()
 
 #  Output:
 
+
 <img width="972" height="392" alt="image" src="https://github.com/user-attachments/assets/41976fe4-3925-4453-9455-86c036205e0c" />
+
 
 ```
  from sklearn.preprocessing import QuantileTransformer
@@ -236,7 +247,9 @@ df.skew()
 
 # Output:
 
+
 <img width="1394" height="663" alt="image" src="https://github.com/user-attachments/assets/a4573fc5-acdc-4705-9fec-7e515e481919" />
+
 
 ```
  import seaborn as sns
@@ -249,7 +262,9 @@ df.skew()
 
 # Output:
 
+
 <img width="786" height="697" alt="image" src="https://github.com/user-attachments/assets/67af6f71-24e7-49bc-9055-819640c833c3" />
+
 
 ```
  sm.qqplot(np.reciprocal(df["Moderate Negative Skew"]),line='45')
@@ -259,7 +274,10 @@ df.skew()
 
 # Output:
 
+
 <img width="799" height="626" alt="image" src="https://github.com/user-attachments/assets/7ac54711-ae35-4e28-bf65-2d049a80b1bb" />
+
+
 
 ```
  from sklearn.preprocessing import QuantileTransformer
@@ -272,7 +290,10 @@ df.skew()
 
 # Output:
 
+
+
 <img width="795" height="701" alt="image" src="https://github.com/user-attachments/assets/ab51384b-c035-467e-8d0b-aabe9b28ac81" />
+
 
 ```
  df["Highly Negative Skew_1"]=qt.fit_transform(df[["Highly Negative Skew"]])
