@@ -36,7 +36,9 @@ We use this categorical data encoding technique when the features are nominal(do
  df
 
 # OUTPUT
+
     <img width="487" height="549" alt="image" src="https://github.com/user-attachments/assets/f97e2e09-445c-4c42-a92f-28b7946d8144" />
+    
 ```
  from sklearn.preprocessing import LabelEncoder,OrdinalEncoder
  pm=['Hot','Warm','Cold']
@@ -45,13 +47,16 @@ We use this categorical data encoding technique when the features are nominal(do
 
 ```
 # Output:
+
   <img width="688" height="354" alt="image" src="https://github.com/user-attachments/assets/d194e8bf-43b9-4f74-bbdc-3993d23964d2" />
+  
 ```
  df['bo2']=e1.fit_transform(df[["ord_2"]])
  df
 
 ```
 # Output:
+
 <img width="493" height="517" alt="image" src="https://github.com/user-attachments/assets/c787fd64-3eb6-4506-87c4-23a5be3fa1b8" />
 
 ```
@@ -62,7 +67,9 @@ We use this categorical data encoding technique when the features are nominal(do
 
 ```
 # Output:
+
 <img width="511" height="572" alt="image" src="https://github.com/user-attachments/assets/6e5666f7-addc-4432-a34a-cb7317be50de" />
+
 ```
  from sklearn.preprocessing import OneHotEncoder
  ohe=OneHotEncoder()
@@ -73,12 +80,15 @@ We use this categorical data encoding technique when the features are nominal(do
 
 ```
 # Output:
+
 <img width="923" height="604" alt="image" src="https://github.com/user-attachments/assets/0d83c278-c76d-4f2e-97d7-8507ecaa4494" />
+
 ```
 pd.get_dummies(df,columns=["nom_0"])
 
 ```
 # Output:
+
 <img width="764" height="497" alt="image" src="https://github.com/user-attachments/assets/de909740-7543-489c-9b33-98da5b7933f5" />
 
 ```
@@ -86,6 +96,7 @@ pd.get_dummies(df,columns=["nom_0"])
 
 ```
 # Output:
+
 <img width="919" height="444" alt="image" src="https://github.com/user-attachments/assets/991717bc-319e-4832-a7fc-9f194ecc57a5" />
 
 ```
@@ -95,7 +106,9 @@ df
 
 ```
 # Output:
+
 <img width="700" height="603" alt="image" src="https://github.com/user-attachments/assets/8e22a1b5-2acf-47b8-b128-3e4a9bc2c58c" />
+
 ```
  be=BinaryEncoder()
  nd=be.fit_transform(df['Ord_2'])
@@ -103,14 +116,18 @@ df
 
 ```
 # Output:
+
 <img width="685" height="569" alt="image" src="https://github.com/user-attachments/assets/9700142e-08f5-4ab4-bf73-6150a8a0aa24" />
+
 ```
  dfb=pd.concat([df,nd],axis=1)
  dfb
 
 ```
 # Output:
+
 <img width="945" height="527" alt="image" src="https://github.com/user-attachments/assets/1ee85b95-8d7e-4bf9-a557-a83e0624e958" />
+
 ```
  from category_encoders import TargetEncoder
  te=TargetEncoder()
@@ -121,6 +138,7 @@ df
 
 ```
 # Output:
+
 <img width="783" height="670" alt="image" src="https://github.com/user-attachments/assets/b1dd36ee-2dc1-415b-b017-8bd0b7a2923d" />
 
 ```
@@ -132,6 +150,7 @@ df
 
 ```
 # Output:
+
 <img width="1050" height="671" alt="image" src="https://github.com/user-attachments/assets/d4d59022-8395-41aa-970a-d1fcdf732bcc" />
 
 ```
@@ -139,7 +158,9 @@ df
 
 ```
 # Output:
+
 <img width="395" height="303" alt="image" src="https://github.com/user-attachments/assets/005cea6e-c6e2-48ad-ad36-935153c4986f" />
+
 ```
 np.log(df["Highly Positive Skew"])
 
@@ -151,6 +172,7 @@ np.log(df["Highly Positive Skew"])
 
 ```
 # Output:
+
 <img width="479" height="613" alt="image" src="https://github.com/user-attachments/assets/b9d1febd-f4d2-4a12-913d-9db21e6d707d" />
 
 ```
@@ -168,6 +190,7 @@ np.log(df["Highly Positive Skew"])
 # Output:
 
 <img width="466" height="609" alt="image" src="https://github.com/user-attachments/assets/036b77cd-beb6-4e96-85a6-8609ad8743a2" />
+
 ```
   df["Highly Positive Skew_boxcox"], parameters=stats.boxcox(df["Highly Positive Skew"])
   df
@@ -193,6 +216,7 @@ df.skew()
 #  Output:
 
 <img width="972" height="392" alt="image" src="https://github.com/user-attachments/assets/41976fe4-3925-4453-9455-86c036205e0c" />
+
 ```
  from sklearn.preprocessing import QuantileTransformer
  qt=QuantileTransformer(output_distribution='normal')
@@ -203,6 +227,7 @@ df.skew()
 # Output:
 
 <img width="1394" height="663" alt="image" src="https://github.com/user-attachments/assets/a4573fc5-acdc-4705-9fec-7e515e481919" />
+
 ```
  import seaborn as sns
  import statsmodels.api as sm
@@ -223,6 +248,7 @@ df.skew()
 # Output:
 
 <img width="799" height="626" alt="image" src="https://github.com/user-attachments/assets/7ac54711-ae35-4e28-bf65-2d049a80b1bb" />
+
 ```
  from sklearn.preprocessing import QuantileTransformer
  qt=QuantileTransformer(output_distribution='normal',n_quantiles=891)
@@ -244,6 +270,7 @@ df.skew()
 # Output:
 
 <img width="798" height="654" alt="image" src="https://github.com/user-attachments/assets/ae2399af-54e9-4c2d-af84-435696bcfaba" />
+
 ```
  dt=pd.read_csv("titanic_dataset.csv")
  dt
@@ -257,6 +284,7 @@ df.skew()
 # Output:
 
 <img width="794" height="747" alt="image" src="https://github.com/user-attachments/assets/c084da31-adde-45d7-933c-6f145e77de79" />
+
 ```
  sm.qqplot(df["Highly Negative Skew_1"],line='45')
  plt.show() 
