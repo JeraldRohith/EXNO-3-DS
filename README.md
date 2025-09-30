@@ -37,15 +37,19 @@ We use this categorical data encoding technique when the features are nominal(do
 
 # OUTPUT
 
-    <img width="487" height="549" alt="image" src="https://github.com/user-attachments/assets/f97e2e09-445c-4c42-a92f-28b7946d8144" />
     
+  <img width="487" height="549" alt="image" src="https://github.com/user-attachments/assets/f97e2e09-445c-4c42-a92f-28b7946d8144" />
+    
+
 ```
- from sklearn.preprocessing import LabelEncoder,OrdinalEncoder
+
+from sklearn.preprocessing import LabelEncoder,OrdinalEncoder
  pm=['Hot','Warm','Cold']
  e1=OrdinalEncoder(categories=[pm])
  e1.fit_transform(df[["ord_2"]])
 
 ```
+
 # Output:
 
   <img width="688" height="354" alt="image" src="https://github.com/user-attachments/assets/d194e8bf-43b9-4f74-bbdc-3993d23964d2" />
@@ -179,6 +183,7 @@ np.log(df["Highly Positive Skew"])
  np.sqrt(df["Highly Positive Skew"])
 
 ```
+
 # Output:
 
 <img width="420" height="619" alt="image" src="https://github.com/user-attachments/assets/6595f869-d9f8-4e6f-8aa1-d7c31d5ef1e5" />
@@ -187,6 +192,7 @@ np.log(df["Highly Positive Skew"])
  np.square(df["Highly Positive Skew"])
 
 ```
+
 # Output:
 
 <img width="466" height="609" alt="image" src="https://github.com/user-attachments/assets/036b77cd-beb6-4e96-85a6-8609ad8743a2" />
@@ -196,6 +202,7 @@ np.log(df["Highly Positive Skew"])
   df
 
 ```
+
 # Output:
 
 <img width="1382" height="589" alt="image" src="https://github.com/user-attachments/assets/8aaac5e3-3662-480e-ae9b-ec14acc51a6a" />
@@ -204,6 +211,7 @@ np.log(df["Highly Positive Skew"])
 df.skew()
 
 ```
+
 # Output:
 
 <img width="450" height="340" alt="image" src="https://github.com/user-attachments/assets/48374efb-169d-4b3e-a022-1a3ac7e5fcef" />
@@ -213,6 +221,7 @@ df.skew()
  df.skew()
 
 ```
+
 #  Output:
 
 <img width="972" height="392" alt="image" src="https://github.com/user-attachments/assets/41976fe4-3925-4453-9455-86c036205e0c" />
@@ -224,6 +233,7 @@ df.skew()
  df
 
 ```
+
 # Output:
 
 <img width="1394" height="663" alt="image" src="https://github.com/user-attachments/assets/a4573fc5-acdc-4705-9fec-7e515e481919" />
@@ -236,6 +246,7 @@ df.skew()
  plt.show()
 
 ```
+
 # Output:
 
 <img width="786" height="697" alt="image" src="https://github.com/user-attachments/assets/67af6f71-24e7-49bc-9055-819640c833c3" />
@@ -245,6 +256,7 @@ df.skew()
  plt.show()
 
 ```
+
 # Output:
 
 <img width="799" height="626" alt="image" src="https://github.com/user-attachments/assets/7ac54711-ae35-4e28-bf65-2d049a80b1bb" />
@@ -257,6 +269,7 @@ df.skew()
  plt.show()
 
 ```
+
 # Output:
 
 <img width="795" height="701" alt="image" src="https://github.com/user-attachments/assets/ab51384b-c035-467e-8d0b-aabe9b28ac81" />
@@ -267,6 +280,7 @@ df.skew()
  plt.show()
 
 ```
+
 # Output:
 
 <img width="798" height="654" alt="image" src="https://github.com/user-attachments/assets/ae2399af-54e9-4c2d-af84-435696bcfaba" />
@@ -281,13 +295,17 @@ df.skew()
  plt.show()
 
 ```
+
 # Output:
+
 
 <img width="794" height="747" alt="image" src="https://github.com/user-attachments/assets/c084da31-adde-45d7-933c-6f145e77de79" />
 
+
 ```
- sm.qqplot(df["Highly Negative Skew_1"],line='45')
- plt.show() 
+
+sm.qqplot(df["Highly Negative Skew_1"],line='45')
+plt.show() 
 
 ```
 # Output:
